@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ReactionProvider
+name: Python
+spec:
+  services:
+    python:
+      image: reaction-python
+---
+apiVersion: v1
+kind: Reaction
+name: hello-python-app
+spec:
+  kind: Python
+  queries:
+    hello-world-from: 
+    message-count: 
+    inactive-people: 
