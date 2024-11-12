@@ -7,7 +7,7 @@ This is purely experimental and should not be used as an offical SDK.
 ## Usage
 
 When a continuous query is changed, a message is published to a Dapr topic. This simple SDK allows you to subscribe to the 
-topics and register a handle for two types of data changes; `ChangeEvent` and, optionally,  `ControlEvent`.
+topics and register a handler for two types of data changes; `ChangeEvent` and, optionally,  `ControlEvent`.
 
 Here is an example of creating a simple `on_change_event` function and registering the handler.
 
@@ -34,14 +34,14 @@ if __name__ == "__main__":
     reaction.start()
 ```
 
-The configs for a reaction are defined in the yaml file to be deployed with drasi. Queri
+The configs for a reaction are defined in the yaml file to be deployed with drasi.
 
 ## Example
 
-To run the examples, it's best to have drasi running on a kind cluster with `--local`. To ensure drasi starts correctly, 
+To run the example, it's best to have drasi running on a kind cluster with `--local`. To ensure drasi starts correctly, 
 have the [drasi-platform](https://github.com/drasi-project/drasi-platform/tree/main) cloned and build the images directly from the repo. 
 
-After the repo is clone and run the commands `make docker-build` and `make kind-load` in the root folder
+After the repo is clone and run the commands `make docker-build` and `make kind-load` in the root folder.
 
 Then start the drasi platform by running `drasi init --local --version latest`.
 
